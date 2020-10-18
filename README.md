@@ -3,7 +3,7 @@ Code from the book __Programming for the Java (tm) Virtual Machine__
 To use oolong (A JVM Assembler)
 ```
         Usage:
-           Oolong [-g] [-n] [-d directory] [-verbose] file1.j
+           jad oolong [-g] [-n] [-d directory] [-verbose] file1.j
            -g Generate debugging info
            -n Generate debugging info using auto-generated line numbers
            -d Place output files in directory
@@ -13,16 +13,23 @@ To use oolong (A JVM Assembler)
 Eg.
 
 ```
-> java -cp .:./target/oolong-1.0-SNAPSHOT.jar Oolong -d ./target/j  -n -verbose <your .j file>
-```
-
-or better
-
-```
-> ./oolong.sh <your .j file>
+> jad oolong -d ./target/j -n -verbose <your .j file>
 ```
 
 generated class file will be in target/j directory
+
+Building
+========
+
+```
+mvn package
+```
+
+Installing
+==========
+```
+sudo cp target/jad /usr/local/bin/jad
+```
 
 Original Readme
 ===============
