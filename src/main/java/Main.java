@@ -1,7 +1,7 @@
 public class Main {
 
     private static void printUsage() {
-        System.out.println("Usage oolong | gnoloo | dump-class");
+        System.out.println("Usage: oolong | Oolong | gnoloo | Gnoloo | dump-class");
     }
 
     private static String[] shift(String[] args) {
@@ -14,12 +14,15 @@ public class Main {
         if (args.length > 1) {
             switch (args[0]) {
                 case "oolong":
+                case "Oolong":
                     COM.sootNsmoke.oolong.Oolong.main(shift(args));
                     break;
                 case "gnoloo":
+                case "Gnoloo":
                     COM.sootNsmoke.oolong.Gnoloo.main(shift(args));
                     break;
                 case "dump-class":
+                case "DumpClass":
                     COM.sootNsmoke.oolong.DumpClass.main(shift(args));
                     break;
                 default:

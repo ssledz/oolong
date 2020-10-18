@@ -1,34 +1,52 @@
 Code from the book __Programming for the Java (tm) Virtual Machine__
 
-To use oolong (A JVM Assembler)
+To use Oolong (A JVM Assembler)
+
 ```
-        Usage:
-           jad oolong [-g] [-n] [-d directory] [-verbose] file1.j
-           -g Generate debugging info
-           -n Generate debugging info using auto-generated line numbers
-           -d Place output files in directory
-           -verbose Verbose messages
+> jad Oolong -help
+```
+
+```
+Oolong - a Java assembler
+Usage:
+   Oolong [-g] [-n] [-d directory] [-verbose] file1.j ...
+   -g Generate debugging info
+   -n Generate debugging info using auto-generated line numbers
+   -d Place output files in directory
+   -verbose Verbose messages
 ```
 
 Eg.
 
 ```
-> jad oolong -d ./target/j -n -verbose <your .j file>
+> jad Oolong -d ./target/j -n -verbose file1.j
 ```
 
-generated class file will be in target/j directory
+To use Gnoloo (A Java class file disassembler)
+
+```
+> jad Gnoloo -help
+```
+
+```
+Gnoloo - a Java class file disassembler
+Usage:
+    Gnoloo [-d directory] [-] file1.class ...
+    -d write files in directory
+    -  write output to System.out
+```
 
 Building
 ========
 
 ```
-mvn package
+> mvn package
 ```
 
 Installing
 ==========
 ```
-sudo cp target/jad /usr/local/bin/jad
+> sudo cp target/jad /usr/local/bin/jad
 ```
 
 Original Readme

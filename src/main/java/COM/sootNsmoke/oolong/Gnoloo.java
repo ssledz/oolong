@@ -28,7 +28,10 @@ public class Gnoloo implements RuntimeConstants
         {
             try
             {
-                if(a[i].equals("-"))
+                if(a[i].equals("-help")) {
+                    usage();
+                }
+                else if(a[i].equals("-"))
                 {
                     useStdout = true;
                 }
