@@ -1,4 +1,4 @@
-Copied from code from the book __Programming for the Java (tm) Virtual Machine__
+Code from the book __Programming for the Java (tm) Virtual Machine__
 
 To use oolong (A JVM Assembler)
 ```
