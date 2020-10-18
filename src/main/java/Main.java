@@ -14,7 +14,7 @@ public class Main {
         if (args.length > 1) {
             switch (args[0]) {
                 case "oolong":
-                    COM.sootNsmoke.oolong.Gnoloo.main(shift(args));
+                    COM.sootNsmoke.oolong.Oolong.main(shift(args));
                     break;
                 case "gnoloo":
                     COM.sootNsmoke.oolong.Gnoloo.main(shift(args));
