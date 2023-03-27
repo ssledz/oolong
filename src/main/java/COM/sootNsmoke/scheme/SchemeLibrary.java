@@ -1278,9 +1278,10 @@ class string_append extends CompiledProcedure
         Cons l = list;
         while(l != null)
         {
-            length += (list.car() instanceof String)
-                    ? ((String) list.car()).length()
-                    : ((Character[]) list.car()).length;
+            length += (l.car() instanceof String)
+                    ? ((String) l.car()).length()
+                    : ((Character[]) l.car()).length;
+            l = (Cons) l.cdr();
         }
         Character[] s = new Character[length];
         int n = 0;
